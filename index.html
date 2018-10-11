@@ -5,12 +5,24 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap Linked Below-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Your CSS Linked Below-->
     <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
-    
-    Hi there!
+    <div class="container" >
+      <!-- Header of the Memo Page-->
+      <div class="row">
+        <h1>Good Ol' Memos</h1>
+      </div>
+      <!-- Body of the Memo Page -->
+      <div class="row scrollBox">
+        <div class="col-md-12" id="memo-board">
+
+        </div>
+      </div>
+    </div>
     
     
     
@@ -20,7 +32,21 @@
     
     <!-- jQuery Linked Below-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- firebase Linked Below-->
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
     <!-- Your Javascript Linked Below-->
     <script src="js/index.js" type="module" defer></script> 
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDMH_wXIWwjt17VOBlxK04yaZmVBfpeihA",
+        authDomain: "good-ol-memos.firebaseapp.com",
+        databaseURL: "https://good-ol-memos.firebaseio.com",
+        projectId: "good-ol-memos",
+        storageBucket: "good-ol-memos.appspot.com",
+        messagingSenderId: "228309781176"
+      };
+      firebase.initializeApp(config);
+    </script>
   </body>
 </html>
