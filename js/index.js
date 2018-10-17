@@ -17,7 +17,6 @@ databaseRef.once('value').then(function(snapshot) {
 
     const memos = databaseValues.memos
 
-    console.log(typeof(memos[0].author))
 
     appendNote(memos[0]);
 
