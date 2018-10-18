@@ -17,7 +17,9 @@
     <h1 id="header" class="col-sm-12">Good Ol' Memos</h1>
 
     <div id="row">
-      <div id >
+      <div class="col-md-12" id="memo-board">
+        
+      </div>
     </div>
 
 
@@ -28,4 +30,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Your Javascript Linked Below-->
     <script src="js/index.js" type="module" defer></script>
+    <!-- Firebase imported -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDMH_wXIWwjt17VOBlxK04yaZmVBfpeihA",
+        authDomain: "good-ol-memos.firebaseapp.com",
+        databaseURL: "https://good-ol-memos.firebaseio.com",
+        projectId: "good-ol-memos",
+        storageBucket: "good-ol-memos.appspot.com",
+        messagingSenderId: "228309781176"
+      };
+      firebase.initializeApp(config);
+    </script>
 </html>
