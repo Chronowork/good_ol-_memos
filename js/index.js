@@ -1,5 +1,6 @@
 // Write your JS here
 import test from './script2.js';
+import { appendAllNotes } from './memos.js';
 
 console.log('test');
 
@@ -12,24 +13,11 @@ var databaseRef = firebase.database().ref('/');
 databaseRef.once('value').then(function(snapshot) {
     //Get the values from the snapshot of the data
     const databaseValues = snapshot.val();
-    //Log all the data to the console
-    console.log(databaseValues.memos[0]);
 
     const memos = databaseValues.memos
 
+    console.log(memos);
 
-    appendNote(memos[0]);
-
-    function appendNote(note) {
-        console.log(note.author);
-        $("#memo-board").append(
-           "<div class='card-body'>" + 
-           "<h5 class='card-title'>" + note.author + "</h5>" +
-           "<p class='card-text'>" + note.quote + "</p>" +
-           "<p>" + note.date + "</p>" +
-           "</div>"
-        );
-        
-    }
+    appendAllNotes(memos);
 });
 
