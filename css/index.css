@@ -1,8 +1,8 @@
 @import url("./bootstrap.min.css");
 /* Write your CSS here */
 .scrollBox {
-    height: 100%;
-    overflow:auto;
+  height: 100%;
+  overflow:auto;
 }
 
 #header
@@ -10,4 +10,17 @@
   text-align: center;  
   padding: 15px 0px 15px 10px;
   background-color: salmon;
+}
+
+.card-title {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.card-text {
+  display: block;
+}
+
+.card-date {
+  float: right;
 }
