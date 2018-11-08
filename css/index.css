@@ -10,6 +10,7 @@
   text-align: center;  
   padding: 15px 0px 15px 10px;
   background-color: salmon;
+  text-shadow: 2px 2px 25px rgb(67, 226, 53);
 }
 
 .card-title {
@@ -23,4 +24,22 @@
 
 .card-date {
   float: right;
+}
+
+#quote-input {
+  padding-right: 50px;
+}
+
+label {
+ margin-left: 7%;
+ font-family: garamond;
+ font-size: 25px;
+}
+
+#note-title, #AddNote {
+  margin-left: 10%;
+}
+
+#AddNote:hover {
+  box-shadow: 0px 0px 25px rgb(44, 95, 206);
 }

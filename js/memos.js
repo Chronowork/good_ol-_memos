@@ -15,19 +15,4 @@ function appendAllNotes(noteList) {
     }
 }
 
-function pushNoteToDatabase(name, nickname, quote, databaseRef) {
-    let note = {
-        author: {
-            name: name,
-            nickname: nickname
-        },
-        quote: quote,
-        date: "11-04-2901"
-    }
-    console.log(note);
-    databaseRef.push(
-        note
-    )
-}
-
-export { appendAllNotes, pushNoteToDatabase };
+export { appendAllNotes };

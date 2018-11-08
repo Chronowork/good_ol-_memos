@@ -1,6 +1,6 @@
 // Write your JS here
 import test from './script2.js';
-import { appendAllNotes, pushNoteToDatabase } from './memos.js';
+import { appendAllNotes } from './memos.js';
 
 console.log('test');
 
@@ -17,8 +17,4 @@ databaseRef.once('value').then(function(snapshot) {
     console.log(memos);
 
     appendAllNotes(memos);
-});
-
-$("#AddNote").click(function() {
-    pushNoteToDatabase("1", "2", "3", databaseRef);
 });
