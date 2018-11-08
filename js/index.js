@@ -1,24 +1,24 @@
 // Write your JS here
-import test from './script2.js';
-import { appendAllNotes, pushNoteToDatabase } from './memos.js';
+import { initialize_firebase, get_database_snapshot } from './firebase.js';
+import { appendNote } from './memos.js';
 
-console.log('test');
-
-test();
-
-// Create your reference to your data. In this case we are rerencing the entire database at '/'
-var databaseRef = firebase.database().ref('/memos');
+initialize_firebase();
 
 //Listen to your database and get a snapshot at that reference
-databaseRef.once('value').then(function(snapshot) {
-    //Get the values from the snapshot of the data
-    const memos = snapshot.val();
-
-    console.log(memos);
-
-    appendAllNotes(memos);
+get_database_snapshot(function(snapshot) {
+    let noteList = snapshot.val();
+    for(let i = 0; i < noteList.length; i++) {
+        appendNote(noteList[i]);
+    }
 });
 
 $("#AddNote").click(function() {
-    pushNoteToDatabase("1", "2", "3", databaseRef);
-});
+    let obj = {
+        author: {
+            name: $("#author-input").val()
+        },
+        quote: $("#quote-input").val(),
+        date:  new Date().toJSON().slice(0,10)
+    }
+    console.log(obj);
+})
