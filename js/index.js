@@ -6,10 +6,9 @@ initialize_firebase();
 
 //Listen to your database and get a snapshot at that reference
 get_database_snapshot(function(snapshot) {
-    let noteList = snapshot.val();
-    for(let i = 0; i < noteList.length; i++) {
-        appendNote(noteList[i]);
-    }
+    let noteList = Object.values(snapshot.val());
+    noteList.map(appendNote);
+    console.log(noteList)
 });
 
 $("#AddNote").click(function() {
