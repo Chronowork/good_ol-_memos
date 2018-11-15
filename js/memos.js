@@ -9,7 +9,7 @@ export function appendNote(note) {
     ); 
 }
 
-export class note {
+export class Note {
     constructor(author, quote, date) {
         this.author = author,
         this.quote = quote,
