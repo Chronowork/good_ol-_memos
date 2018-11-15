@@ -8,3 +8,11 @@ export function appendNote(note) {
         "</div>"
     ); 
 }
+
+export class note {
+    constructor(author, quote, date) {
+        this.author = author,
+        this.quote = quote,
+        this.date = date
+    }
+}

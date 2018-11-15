@@ -1,6 +1,6 @@
 // Write your JS here
 import { initialize_firebase, get_database_snapshot } from './firebase.js';
-import { appendNote } from './memos.js';
+import { appendNote, note } from './memos.js';
 
 initialize_firebase();
 
@@ -8,7 +8,6 @@ initialize_firebase();
 get_database_snapshot(function(snapshot) {
     let noteList = Object.values(snapshot.val());
     noteList.map(appendNote);
-    console.log(noteList)
 });
 
 $("#AddNote").click(function() {
