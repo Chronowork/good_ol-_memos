@@ -8,6 +8,16 @@ initialize_firebase();
 get_database_snapshot(function(snapshot) {
     let noteList = Object.values(snapshot.val());
     noteList.map(appendNote);
+
+    var posts = snapshot.val();
+  for (var i = 0; i < posts.length; i++) {
+    let profile = posts[i].author.profilePicture;
+    var img = $("<img>").attr("src", profile);
+
+    $(".row").append(img);
+    
+  console.log(profile);
+  }
 });
 
 $("#AddNote").click(function() {
