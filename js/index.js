@@ -13,7 +13,7 @@ get_database_snapshot(function(snapshot) {
 $("#AddNote").click(function() {
     let author = {
         name: $("#author-input").val(),
-        profilePicture: null,
+        profilePicture: $("profile-input").val(),
     }
     let quote = $("#quote-input").val();
     let currentDate = new Date().toDateString();
