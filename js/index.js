@@ -1,5 +1,5 @@
 // Write your JS here
-import { initialize_firebase, get_database_snapshot } from './firebase.js';
+import { initialize_firebase, get_database_snapshot, get_database_path } from './firebase.js';
 import { appendNote, Note } from './memos.js';
 
 initialize_firebase();
@@ -11,5 +11,13 @@ get_database_snapshot(function(snapshot) {
 });
 
 $("#AddNote").click(function() {
-
+    let author = {
+        name: $("#author-input").val(),
+        profilePicture: null,
+    }
+    let quote = $("#quote-input").val();
+    let currentDate = new Date().toDateString();
+    const newNote = new Note(author, quote, currentDate, null)
+    console.log(newNote);
+    get_database_path().push(newNote);
 })
