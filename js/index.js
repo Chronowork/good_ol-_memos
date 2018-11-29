@@ -9,6 +9,16 @@ get_database_snapshot(function(snapshot) {
     let noteList = Object.values(snapshot.val());
     console.log(noteList);
     noteList.map(appendNote);
+
+    var posts = snapshot.val();
+  for (var i = 0; i < posts.length; i++) {
+    let profile = posts[i].author.profilePicture;
+    var img = $("<img>").attr("src", profile);
+
+    $(".row").append(img);
+    
+  console.log(profile);
+  }
 });
 
 $("#AddNote").click(function() {
