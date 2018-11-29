@@ -19,5 +19,8 @@ export function get_database_snapshot(callback) {
   //   ref.once('value', callback)
   let databaseRef = firebase.database().ref('/memos');
   databaseRef.once('value', callback);
+}
 
+export function get_database_path() {
+  return firebase.database().ref('/memos');
 }

@@ -12,10 +12,11 @@ export function appendNote(note) {
     ); 
 }
 
-export class note {
-    constructor(author, quote, date) {
+export class Note {
+    constructor(author, quote, date, profilePicture) {
         this.author = author,
         this.quote = quote,
-        this.date = date
+        this.date = date,
+        this.profilePicture = profilePicture
     }
 }
