@@ -4,7 +4,7 @@
 {
   text-align: center;  
   padding: 15px 0px 15px 10px;
-  background-color: salmon;
+  background-color: #6bb1ff;
   text-shadow: 2px 2px 25px rgb(67, 226, 53);
 }
 
@@ -29,6 +29,8 @@ label {
  margin-left: 7%;
  font-family: garamond;
  font-size: 25px;
+ min-width: 150px;
+ text-align: right;
 }
 
 #quote-box {
@@ -51,6 +53,7 @@ label {
   text-align: center;
 }
 
-#memo-box {
+#memo-board {
   display: flex;
+  flex-wrap: wrap;
 }
