@@ -31,4 +31,6 @@ $("#AddNote").click(function() {
     const newNote = new Note(author, quote, currentDate, null)
     console.log(newNote);
     get_database_path().push(newNote);
+    location.reload();
 })
+

@@ -57,3 +57,8 @@ label {
   display: flex;
   flex-wrap: wrap;
 }
+
+#Profile-Image {
+  height: 250px;
+  width: 250px;
+}

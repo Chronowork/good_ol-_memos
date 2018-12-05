@@ -6,7 +6,7 @@ export function appendNote(note) {
         "<div class='card-body'>" + 
         "<h5 class='card-title'>" + note.author.name + "</h5>"  +
         "<p class='card-text'>" + note.quote + "</p>" +
-        '<img src ="'+ profile +'"></img>'+
+        '<img id="Profile-Image" src ="'+ profile +'"></img>'+
         "<p class='card-date text-muted'>" + note.date + "</p>" +
         "</div>"
     ); 
