@@ -58,7 +58,3 @@ label {
   text-align: center;
 }
 
-#memo-board {
-  display: flex;
-  flex-wrap: wrap;
-}
