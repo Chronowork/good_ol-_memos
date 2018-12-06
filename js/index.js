@@ -8,17 +8,7 @@ initialize_firebase();
 get_database_snapshot(function(snapshot) {
     let noteList = Object.values(snapshot.val());
     console.log(noteList);
-    noteList.map(appendNote);
-
-    var posts = snapshot.val();
-  for (var i = 0; i < posts.length; i++) {
-    let profile = posts[i].author.profilePicture;
-    var img = $("<img>").attr("src", profile);
-
-    $(".row").append(img);
-    
-  console.log(profile);
-  }
+    noteList.map(appendNote);    
 });
 
 $("#AddNote").click(function() {
@@ -31,6 +21,4 @@ $("#AddNote").click(function() {
     const newNote = new Note(author, quote, currentDate, null)
     console.log(newNote);
     get_database_path().push(newNote);
-    location.reload();
 })
-
