@@ -12,9 +12,16 @@ get_database_snapshot(function(snapshot) {
 });
 
 $("#AddNote").click(function() {
+    let picture = $("#profile-input").val();
+    if (picture === undefined || picture === "") {
+        picture = "https://www.dentsinc.co.uk/wp-content/uploads/2015/11/photo-placeholder-square.png";
+    }
     let author = {
         name: $("#author-input").val(),
-        profilePicture: $("#profile-input").val(),
+        profilePicture: picture,
+    }
+    if (author.name === undefined || author.name === "") {
+        author.name = "Anonymous"
     }
     let quote = $("#quote-input").val();
     let currentDate = new Date().toDateString();
