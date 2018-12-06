@@ -1,11 +1,13 @@
 export function appendNote(note) {
     $("#memo-board").append(
+        "<div class='row'>" +
         "<hr>" +
         "<div class='card-body'>" + 
         "<h5 class='card-title'>" + note.author.name + "</h5>"  +
         '<img class="profile-picture" id="profile-Image" src ="'+ note.author.profilePicture +'"></img>'+
         "<p class='card-text'>" + note.quote + "</p>" +
         "<p class='card-date text-muted'>" + note.date + "</p>" +
+        "</div>" +
         "</div>"
     ); 
 }
