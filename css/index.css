@@ -8,6 +8,12 @@
   text-shadow: 2px 2px 25px rgb(67, 226, 53);
 }
 
+.profile-picture 
+{
+  height: 64px;
+  width: 64px;
+}
+
 .card-title {
   font-style: italic;
   font-weight: bold;
