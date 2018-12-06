@@ -7,7 +7,6 @@ initialize_firebase();
 //Listen to your database and get a snapshot at that reference
 get_database_snapshot(function(snapshot) {
     let noteList = Object.values(snapshot.val());
-    console.log(noteList);
     noteList.map(appendNote);
 
     var posts = snapshot.val();
