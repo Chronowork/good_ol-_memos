@@ -10,5 +10,5 @@ notes = {
         profilePicture: img-url;
     };
     quote: string;
-    date: string (MM-DD-YYYY format);
+    date: string (day of the week, month, DD, YYYY);
 }
